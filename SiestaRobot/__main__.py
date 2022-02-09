@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-SIESTA_IMG = "https://telegra.ph/file/6d3e3ef24f64fb6e35df0.jpg"
+SIESTA_IMG = "https://te.legra.ph/file/90b49303716084ccb7f98.mp4"
 
 DONATE_STRING = """✌️I'm free for everyone ✌️"""
 
@@ -214,7 +214,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Siestaxbot?startgroup=new"),
+                                text=gs(chat.id, "add_bot_to_group_button"), url="http://t.me/Enmu_kizuki_bot?startgroup=true"),
                         ]
                     ]
                 ),
@@ -414,7 +414,7 @@ def siesta_about_callback(update, context):
                             InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Siestaxbot?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="http://t.me/Enmu_kizuki_bot?startgroup=true"),
                         ]
                     ]
                 ),
@@ -456,8 +456,8 @@ def siesta_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), url="t.me/machinaxupport"),
-                        InlineKeyboardButton(text=gs(chat.id, "updates_channel_link_button"), url="https://t.me/machinaxupdate"),
+                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), url="t.me/Enmu_chat_support"),
+                        InlineKeyboardButton(text=gs(chat.id, "updates_channel_link_button"), url="https://t.me/Enmuupdates"),
                     ],
                     [
                         InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
@@ -474,11 +474,11 @@ def siesta_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Vain", url="https://github.com/shiinobu"),
+                        InlineKeyboardButton(text="Kokushibo", url="https://github.com/Kokushibo-kizuki-1"),
                     ],
                     [
-                        InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                        InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
+                        InlineKeyboardButton(text="Asta", url="t.me/baby_hoi"),
+                        InlineKeyboardButton(text="X_hate", url="t.me/X_hate"),
                     ],
                     [
                         InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
@@ -525,7 +525,7 @@ def Source_about_callback(update, context):
                             InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Siestaxbot?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="http://t.me/Enmu_kizuki_bot?startgroup=true"),
                         ]
                     ]
                 ),
@@ -764,7 +764,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 945137470:
+        if OWNER_ID != :
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({t.me/animefansgroup_afg})".format(DONATION_LINK),
