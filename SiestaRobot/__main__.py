@@ -85,10 +85,7 @@ def get_readable_time(seconds: int) -> str:
 
 SIESTA_IMG = "https://telegra.ph/file/6d3e3ef24f64fb6e35df0.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @saint_foire \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """✌️I'm free for everyone ✌️"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -770,7 +767,7 @@ def donate(update: Update, context: CallbackContext):
         if OWNER_ID != 945137470:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
-                "[My Channel]({})".format(DONATION_LINK),
+                "[My Channel]({t.me/animefansgroup_afg})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
     else:
@@ -816,7 +813,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**Yes Darling ❤️, i am activated!**""",
+                f"""**I'm Ready To serve.**""",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
