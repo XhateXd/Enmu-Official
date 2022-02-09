@@ -254,7 +254,7 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Getting info...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Contacting Sydexas For Info.....</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"╔═━「<b> Appraisal results:</b> 」\n"
@@ -301,22 +301,22 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'King'."
+        text += "\n\nThe Disaster level of this person is 'ᴜᴘᴘᴇʀ ᴍᴏᴏɴ 1'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Prince'."
+        text += "\n\nThis user is member of 'ᴜᴘᴘᴇʀ ᴍᴏᴏɴs'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Emperor'."
+        text += "\n\nThe Disaster level of this person is 'ʟᴏᴡᴇʀ ᴍᴏᴏɴs'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Governor'."
+        text += "\n\nThe Disaster level of this person is 'Xʟᴏᴡᴇʀᴍᴏᴏɴs'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Captain'."
+        text += "\n\nThe Disaster level of this person is 'ᴅᴇᴍᴏɴs'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Soldier'."
+        text += "\n\nThe Disaster level of this person is ' Xᴅᴇᴍᴏɴs'."
         disaster_level_present = True
     elif user.id == 1829047705:
          text += "\n\nOwner Of A Bot. Queen Of @excrybaby. Bot Name Inspired From 'JoJo'."
@@ -356,9 +356,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/EnmuUpdates/5"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/EnmuUpdates/4")
                         ],
                     ]
                 ),
@@ -374,9 +374,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/EnmuUpdates/5"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/EnmuUpdates/4")
                         ],
                     ]
                 ),
@@ -433,7 +433,7 @@ def set_about_me(update: Update, context: CallbackContext):
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
             if user_id in [777000, 1087968824]:
-                message.reply_text("Authorized...Information updated!")
+                message.reply_text("Information Sent To Sydexas!")
             elif user_id == bot.id:
                 message.reply_text("I have updated my info with the one you provided!")
             else:
@@ -446,16 +446,50 @@ def set_about_me(update: Update, context: CallbackContext):
                 ),
             )
 
+@run_async
 @sudo_plus
-def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current Siesta Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
-    result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By Shiinobu 」</b>"
-    update.effective_message.reply_text(
-        result,
-        parse_mode=ParseMode.HTML, 
-        disable_web_page_preview=True
-   )
+def stats(update, context):
+    uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
+    status = "*╒═══「 System Statistics 」*\n\n"
+    status += "*➢ System Start time:* " + str(uptime) + "\n"
+    uname = platform.uname()
+    status += "*➢ System:* " + str(uname.system) + "\n"
+    status += "*➢ Node name:* " + escape_markdown(str(uname.node)) + "\n"
+    status += "*➢ Release:* " + escape_markdown(str(uname.release)) + "\n"
+    status += "*➢ Machine:* " + escape_markdown(str(uname.machine)) + "\n"
+    mem = virtual_memory()
+    cpu = cpu_percent()
+    disk = disk_usage("/")
+    status += "*➢ CPU:* " + str(cpu) + " %\n"
+    status += "*➢ RAM:* " + str(mem[2]) + " %\n"
+    status += "*➢ Storage:* " + str(disk[3]) + " %\n\n"
+    status += "*➢ Python Version:* " + python_version() + "\n"
+    status += "*➢ python-Telegram-Bot:* " + str(ptbver) + "\n"
+    try:
+        update.effective_message.reply_text(
+            status
+            + "\n*Bot statistics*:\n"
+            + "\n".join([mod.__stats__() for mod in STATS])
+            + f"\n\n✦ [Support](https://t.me/enmu_chat_support) | ✦ [Updates](https://t.me/enmuupdates)\n\n"
+            + "╘══「 Powered By [Enmu](https://t.me/Enmu_kizuki_bot) | [Network](https://t.me/sydexas) 」\n",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
+    except BaseException:
+        update.effective_message.reply_text(
+            (
+                (
+                    (
+                        "\n*Bot Statistics*:\n"
+                        + "\n".join(mod.__stats__() for mod in STATS)
+                    )
+                    + f"\n\n✦ [Support](https://t.me/enmu_chat_support) | ✦ [Updates](http://t.me/enmuupdates)\n\n"
+                )
+                + "╘══「 Powered By [Enmu](https://t.me/Enmu_Kizuki_bot) | [Network](http://t.me/sydexas)」\n"
+            ),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
         
         
 def about_bio(update: Update, context: CallbackContext):
