@@ -71,7 +71,7 @@ async def info_func(_, message: Message):
     elif not message.reply_to_message and len(message.command) != 1:
         user = message.text.split(None, 1)[1]
 
-    m = await message.reply_text("Processing...")
+    m = await message.reply_text("Contacting Sydexas For Info.....")
 
     try:
         info_caption, photo_id = await get_user_info(user)
@@ -104,7 +104,7 @@ async def chat_info_func(_, message: Message):
         elif len(message.command) == 2:
             chat = message.text.split(None, 1)[1]
 
-        m = await message.reply_text("Processing...")
+        m = await message.reply_text("Contacting Sydexas For Info........")
 
         info_caption, photo_id = await get_chat_info(chat)
         if not photo_id:
