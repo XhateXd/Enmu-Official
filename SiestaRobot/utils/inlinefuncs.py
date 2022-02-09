@@ -41,31 +41,31 @@ from SiestaRobot.utils.pastebin import paste
 MESSAGE_DUMP_CHAT = EVENT_LOGS
 
 keywords_list = [
-    "ᴀʟɪᴠᴇ",
-    "ɪᴍᴀɢᴇ",
-    "ᴡᴀʟʟ",
-    "ᴛᴍᴅʙ",
-    "ʟʏʀɪᴄs",
-    "ᴇxᴇᴄ",
-    "sᴘᴇᴇᴅᴛᴇsᴛ",
-    "sᴇᴀʀᴄʜ",
-    "ᴘɪɴɢ",
-    "ᴡᴇʙss",
-    "ғᴀᴋᴇɢᴇɴ",
-    "ɢsᴇᴀʀᴄʜ",
-    "ᴘᴀsᴛᴇ",
-    "ᴛʀ",
-    "ᴜᴅ",
-    "ʏᴏᴜᴛᴜʙᴇ",
-    "ɪɴғᴏ",
-    "ɢᴏᴏɢʟᴇ",
-    "ɢʜ",
-    "ᴛᴏʀʀᴇɴᴛ",
-    "ᴘᴏᴋᴇᴅᴇx",
-    "sᴀᴀᴠɴ",
-    "ᴡɪᴋɪ",
-    "ᴍᴜsɪᴄ",
-    "ʏᴛᴍᴜsɪᴄ",
+    "Alive",
+    "Image",
+    "Wall",
+    "Tmdb",
+    "Lyrics",
+    "Exec",
+    "Speedtest",
+    "Search",
+    "Ping",
+    "Webbs",
+    "Fakegen",
+    "Gsearch",
+    "Paste",
+    "Tr",
+    "Ud",
+    "Youtube",
+    "Info",
+    "Google",
+    "Gh",
+    "Torrent",
+    "Pokedex",
+    "Saavan",
+    "Wiki",
+    "Music",
+    "Ytmusic",
 ]
 
 
@@ -101,7 +101,7 @@ async def inline_help_func(__HELP__):
             input_message_content=InputTextMessageContent(
                 "**__Click A Button To Get Started.__**"
             ),
-            thumb_url="https://telegra.ph/file/5755d25e718851cdecacb.jpg",
+            thumb_url="https://telegra.ph/file/bf1306a07c9edda1ff8f5.jpg",
             reply_markup=buttons,
         ),
     ]
@@ -114,27 +114,27 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/Siestaxbot"),
+        InlineKeyboardButton("Support", url="t.me/enmu_chat_support"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
     )
 
     msg = f"""
-**[Siesta Robot ❤️](https://t.me/machinaxsupport):**
+**[Enmu Robot](https://t.me/Enmu_kizuki_bot):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [OWNER BOT](t.me/saint_foire)
+**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [OWNER BOT](t.me/UppermoonX1)
 """
     answers.append(
         InlineQueryResultArticle(
             title="Alive",
             description="Check Bot's Stats",
-            thumb_url="https://telegra.ph/file/5755d25e718851cdecacb.jpg",
+            thumb_url="https://telegra.ph/file/b5345879264a31f7f1ec0.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
             ),
