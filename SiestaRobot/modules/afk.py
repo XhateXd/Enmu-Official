@@ -139,16 +139,16 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if not user.reason:
-            res = gs(chat.id, "afk_check").format(fst_name)
+            res = gs(chat.id, afk_check).format(fst_name)
             update.effective_message.reply_text(res)
         else:
-            res = gs(chat.id, "afk_check_reason").format(
+            res = gs(chat.id, afk_check_reason).format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
 
 
-AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
+AFK_HANDLER = DisableAbleCommandHandler(afk, afk, run_async=True)
 AFK_REGEX_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"^(?i)brb(.*)$"), afk, friendly="afk", run_async=True
 )
