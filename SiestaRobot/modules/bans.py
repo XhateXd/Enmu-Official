@@ -92,23 +92,23 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against a King huh?")
+            message.reply_text("Trying to put me against my Owner huh?")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our Prince.")
+            message.reply_text("I can't act against Upper Moons.")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Emperor here will put user lives at risk."
+                "Fighting this Lower Moon here will put user lives at risk."
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Captain to fight a Assasin servant."
+                "Bring an order from SyDeXaS to fight a XLower Moon."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Soldier to fight a Lancer servant."
+                "Bring an order from Lower Moons to fight a Demon."
             )
         elif user_id in WOLVES:
-            message.reply_text("Trader access make them ban immune!")
+            message.reply_text("XDemon access make them ban immune!")
         else:
             message.reply_text("⚠️ Cannot banned admin.")
         return log_message
@@ -204,10 +204,10 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
     except BadRequest as excp:
         if excp.message != "User not found":
             raise
-        message.reply_text("I can't seem to find this user.")
+        message.reply_text("I can't seem to find this demon.")
         return log_message
     if user_id == bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy?")
+        message.reply_text("I'm not gonna BAN myself, are you crazy human?")
         return log_message
 
     if is_user_ban_protected(chat, user_id, member):
@@ -215,7 +215,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if not reason:
-        message.reply_text("You haven't specified a time to ban this user for!")
+        message.reply_text("You haven't specified a time to ban this human for!")
         return log_message
 
     split_reason = reason.split(None, 1)
@@ -364,14 +364,14 @@ def punch(update: Update, context: CallbackContext) -> str:
         if excp.message != "User not found":
             raise
 
-        message.reply_text("⚠️ I can't seem to find this user.")
+        message.reply_text("⚠️ I can't seem to find this human.")
         return log_message
     if user_id == bot.id:
         message.reply_text("Yeahhh I'm not gonna do that.")
         return log_message
 
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("I really wish I could punch this user....")
+        message.reply_text("I really wish I could punch this human...")
         return log_message
 
     res = chat.unban_member(user_id)  # unban on current user = kick
@@ -502,7 +502,7 @@ def selfunban(update: Update, context: CallbackContext) -> str:
         member = chat.get_member(user.id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("I can't seem to find this human.")
             return
         else:
             raise
@@ -512,7 +512,7 @@ def selfunban(update: Update, context: CallbackContext) -> str:
         return
 
     chat.unban_member(user.id)
-    message.reply_text(f"Yep, I have unbanned The user.")
+    message.reply_text(f"Yep, I have unbanned The human.")
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
@@ -536,7 +536,7 @@ def banme(update: Update, context: CallbackContext):
 
     res = update.effective_chat.ban_member(user_id)
     if res:
-        update.effective_message.reply_text("Yes, you're right! GTFO..")
+        update.effective_message.reply_text("Yes, you're right! Go and serve your gf/bf..")
         return (
             "<b>{}:</b>"
             "\n#BANME"
