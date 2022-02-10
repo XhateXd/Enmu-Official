@@ -9,20 +9,19 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 
 # PM Text
 pm_start_text: |
-  *Hey Demon, {} 👹*
-  ✪ I'm an anime-theme management robot [🔥](https://telegra.ph/file/69b93d32fe604ef643fc3.jpg)
-
-  ┏━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┓
-  × *Server Uptime :* `{}`
-  × `{}` *users, across* `{}` *chats.*
-  ┗━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┛
-
-  ✪ Hit /help to see my available commands.
+ ────「 [ENMU KIZUKI](t.me/enmu_kizuki_bot) 」────
+ʜᴇʏ! {}|,
+ɪ ᴀᴍ  ENMU ᴀ ᴍᴜʟᴛɪғᴜɴᴄᴛɪᴏɴᴀʟ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ.
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+× *Server Uptime :* {}
+  × {} *users, across* {} *chats.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+➛ʜɪᴛ /help ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʙɪʟɪᴛɪᴇs. ××
    
 group_start_text: |
-  *👹 Hi Demon, I'm Enmu Kizuki bot!*
+  * I'm Working Properly !*
   
-  *Started active since :* `{}`
+  *Haven't Slept since :* `{}`
 
 pm_about_text: |
   ✺ Hey Demon I'm *Enmu Kizuki bot*, a powerful group management bot built to help you manage your group easily. ✺
