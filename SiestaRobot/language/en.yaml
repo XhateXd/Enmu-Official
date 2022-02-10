@@ -9,7 +9,7 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 
 # PM Text
 pm_start_text: |
-  *Hey Demon, {} ❤️*
+  *Hey Demon, {} 👹*
   ✪ I'm an anime-theme management robot [🔥](https://telegra.ph/file/69b93d32fe604ef643fc3.jpg)
 
   ┏━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┓
@@ -58,7 +58,7 @@ pm_about_support_text: |
 
   Join My Support Group/Channel for see or report a problem on Enmu.
 pm_about_credit_text: |
-  *✺ Credis for Siesta ✺*
+  *✺ Credis for Enmu Kizuki ✺*
 
   Here Developers Making And Give Inspiration For Made The Enmu Kizuki bot
 pm_help_text: |
@@ -665,7 +665,7 @@ search_help: |
     ❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
     ❂ Siesta <query>*:* Siesta answers the query
 
-    💡 Ex : `Siesta where is Japan?`
+    💡 Ex : `Enmu where is Japan?`
 stickers_help: |
     ──「 Stickers 」──
 
