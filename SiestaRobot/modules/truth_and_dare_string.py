@@ -15,6 +15,17 @@ TRUTH = (
     "When’s the last time you lied to your parents and why?",
     "Have you ever lied about your age to participate in a contest?",
     "Have you ever been caught checking someone out?",
+    "What do you think about Tsunade Senju?",
+    "What do you think about the owner of this group?",
+    "Have you ever watched Hentae?",
+    "Why do you think that your crush will marry you?",
+    "Who is the biggest pervert of this group?",
+    "Who is your bed partner?",
+    "What's your cup size?",
+    "Do you hate Tsunade just cause she have big?",
+    "What do you think about Boys?",
+    "What do you think about girls?",
+    "Why Everyone Hates you?",
 )
 
 DARE = (
