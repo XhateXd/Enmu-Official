@@ -30,20 +30,20 @@ MEMEK = "https://telegra.ph/file/1b41086dccb8135d7c3c7.jpg"
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hey I'm Enmu** ✨ 
+        caption=f"""**Hey I'm Enmu**  
 
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
 **Pyrogram Version :** `{z}`
 
-**Contact my Owner For repo.**
+**This Repo can be drawn by my Master.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Owner", url="https://t.me/Uppermoonx1"), 
+                        "Master", url="https://t.me/Uppermoonx1"), 
                     InlineKeyboardButton(
                         "Support", url="https://t.me/Enmu_chat_support")
                 ]
