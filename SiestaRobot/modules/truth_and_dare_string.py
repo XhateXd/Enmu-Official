@@ -25,7 +25,7 @@ TRUTH = (
     "Do you hate Tsunade just cause she have big?",
     "What do you think about Boys?",
     "What do you think about girls?",
-    "Why Everyone Hated you?",
+    "Why Everyone Hates you?",
 )
 
 DARE = (
