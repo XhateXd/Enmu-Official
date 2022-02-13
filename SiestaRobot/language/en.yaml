@@ -821,7 +821,7 @@ afk_array6: "{} is finally here!"
 afk_array7: "Welcome back! {}"
 afk_array8: "Where is {}?\nIn the chat!"
 afk_check: "{} is afk"
-afk_check_reason: "{} is afk.\nReason: <code>{}</code>"
+afk_check_reason: "{} is afk.\nReason: {}"
 
 # Antichannel.py Variabel
 active_antichannel: "Enabled antichannel in {}"
