@@ -37,7 +37,7 @@ regex_downvote = r"^(\-|\-\-|\-1|👎|noob|weak)$"
 )
 @capture_err
 async def upvote(_, message):
-    if not is_karma_on(message.chat.id):
+    if not await is_karma_on(message.chat.id):
         return
     if not message.reply_to_message.from_user:
         return
@@ -55,10 +55,10 @@ async def upvote(_, message):
     else:
         karma = 1
     new_karma = {"karma": karma}
-    await update_karma(chat_id, await int_to_alpha(user_id), new_karma)
     await message.reply_text(
         f"Incremented Karma of {user_mention} By 1 \nTotal Points: {karma}"
     )
+    await update_karma(chat_id, await int_to_alpha(user_id), new_karma)
 
 
 @app.on_message(
@@ -92,10 +92,10 @@ async def upvote(_, message):
     else:
         karma = 1
     new_karma = {"karma": karma}
-    await update_karma(chat_id, await int_to_alpha(user_id), new_karma)
     await message.reply_text(
         f"Incremented Karma of {user_mention} By 1 \nTotal Points: {karma}"
     )
+    await update_karma(chat_id, await int_to_alpha(user_id), new_karma)
 
 
 @app.on_message(
