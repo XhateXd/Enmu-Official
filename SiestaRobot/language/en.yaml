@@ -10,12 +10,12 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 # PM Text
 pm_start_text: |
   *Hey Demon, {} 👹*
-  ✪ I'm an anime-theme management robot [🔥](https://telegra.ph/file/69b93d32fe604ef643fc3.jpg)
+  ✪ I'm an anime-theme management robot [🔥](https://telegra.ph/file/a6e714c062c93e907c4c7.jpg)
   
-  ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+  ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
   × *Server Uptime :* `{}`
   × `{}` *users, across* `{}` *chats.*
-  ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
+  ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
   ✪ Hit /help to see my available commands.
    
 group_start_text: |
@@ -247,7 +247,7 @@ blacklist_help: |
 chatbot_help: |
     ──「 Chatbot AI 」──
 
-    Siesta AI is the only ai system which can detect & reply upto 200 language's
+    Enmu AI is the only ai system which can detect & reply upto 200 language's
 
     ❂ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
     ❂ /chatbot EN : Enables English only chatbot.
@@ -263,7 +263,7 @@ cleaner_help: |
 
     *Following are Disasters only commands, admins cannot use these:*
 
-    ❂ /gignoreblue <word>*:* globally ignorea bluetext cleaning of saved word across Saitama.
+    ❂ /gignoreblue <word>*:* globally ignorea bluetext cleaning of saved word across Enmu.
     ❂ /ungignoreblue <word>*:* remove said command from global cleaning list
 connection_help: |
     ──「 Connection 」──
@@ -343,7 +343,7 @@ fsub_feds_help: |
 
     *Force Subscribe:*
 
-    Siesta can mute members who are not subscribed your channel until they subscribe When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
+    Enmu can mute members who are not subscribed your channel until they subscribe When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 
     *Setup* *:* *Only creator*
     ❂ Add me in your group as admin
@@ -558,7 +558,7 @@ info_and_afk_help: |
       - brb <reason>: Same as the afk command, but not a command. 
       
     *What is that health thingy?*
-    Come and see [HP System explained](https://t.me/KennedyProject/44)
+    Come and see [HP System explained](https://t.me/EnmuUpdates/5)
 locks_help: |
     ──「 Locks 」──
 
@@ -608,8 +608,8 @@ musicplayer_help: |
     ──「 Musicplayer 」──
 
     Help Music can access with different command and support dashboard help and setting.
-    ❂ /mhelp - for help music module
-    ❂ /msettings - for setting music module
+    ❂ /vchelp - for help music module
+    ❂ /vcsettings - for setting music module
 
     NOTE : DON'T SPAMMING AT REQUEST SONG OR VIDEO...
 notes_help: |
@@ -662,7 +662,7 @@ search_help: |
     ❂ /github <username>*:* Get information about a GitHub user.
     ❂ /country <country name>*:* Gathering info about given country
     ❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-    ❂ Siesta <query>*:* Siesta answers the query
+    ❂ Enmu <query>*:* Enmu answers the query
 
     💡 Ex : `Enmu where is Japan?`
 stickers_help: |
