@@ -387,7 +387,7 @@ def siesta_about_callback(update, context):
                         InlineKeyboardButton(text="Credits", callback_data="siesta_credit"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/shiinobu/SiestaRobot"),
+                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/Kokushibo-kizuki-1"),
                     ],
                     [
                     InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_back"),
@@ -477,8 +477,8 @@ def siesta_about_callback(update, context):
                         InlineKeyboardButton(text="Kokushibo", url="https://github.com/Kokushibo-kizuki-1"),
                     ],
                     [
-                        InlineKeyboardButton(text="Asta", url="t.me/baby_hoi"),
-                        InlineKeyboardButton(text="X_hate", url="t.me/X_hate"),
+                        InlineKeyboardButton(text="Haruki", url="t.me/Baby_hoii"),
+                        InlineKeyboardButton(text="X_Hate", url="t.me/X_hate"),
                     ],
                     [
                         InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
@@ -495,8 +495,8 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text="๏›› This advance command for Musicplayer."
             "\n\n๏ Command for admins and member can you see with command bellow."
-            "\n • `/mhelp` - checking help music module (only in pm bot)"
-            "\n • `/msettings` - setting your authorization music module",
+            "\n • `/vchelp` - checking help music module (only in pm bot)"
+            "\n • `/vcsettings` - setting your authorization music module",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
