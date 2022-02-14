@@ -813,7 +813,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**I'm Ready To serve.**""",
+                f"""**[I'm Ready To serve.](https://telegra.ph/file/24f0dec642085cbf77ab8.jpg)**""",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
