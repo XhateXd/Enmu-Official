@@ -2,24 +2,14 @@ import random
 from SiestaRobot.events import register
 from SiestaRobot import telethn
 
-APAKAH_STRING = ["Iya", 
-                 "Tidak", 
-                 "Mungkin", 
-                 "Mungkin Tidak", 
-                 "Bisa jadi", 
-                 "Mungkin Tidak",
-                 "Tidak Mungkin",
-                 "YNTKTS",
-                 "Pala bapak kau pecah",
-                 "Apa iya?",
-                 "Tanya aja sama mamak kau tu pler"
+APAKAH_STRING = ["Go and ask ur mother!!! Bitch"
                  ]
 
 
-@register(pattern="^/apakah ?(.*)")
+@register(pattern="^/boobs ?(.*)")
 async def apakah(event):
     quew = event.pattern_match.group(1)
     if not quew:
-        await event.reply('Berikan saya pertanyaan 😐')
+        await event.reply('Hmm Horny Want a PP slash ???')
         return
     await event.reply(random.choice(APAKAH_STRING))
