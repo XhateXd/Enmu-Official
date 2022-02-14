@@ -81,11 +81,11 @@ group_settings_text: "Click here to get this chat's settings, as well as yours."
 group_settings_button: "Settings"
 
 # PM Button
-add_bot_to_group_button: "♕ Add Me To Your Group ♕"
+add_bot_to_group_button: "xxx Add Me To Your Group xxx"
 support_chat_link_button: "Support"
 updates_channel_link_button: "Update"
 notes_button: "Notes"
-source_button: "Source Code"
+source_button: "xxx Code Owner xxx"
 help_button: "Get Help"
 back_button: "Go back"
 about_button: "About Enmu Kizuki bot"
@@ -599,8 +599,8 @@ logomarker_help: |
     ──「 Logo Marker 」──
     
     This is help menu for logomaker
-    ❂ /logo <text/name> - Create a logo with random view.
-    ❂ /wlogo <text/name> - Create a logo with wide view only.
+    ❂ /logo <text/name> - Anime Boys logo.
+    ❂ /aglogo <text/name> - Anime Girls logo.
 
     *Image Editor : *
     ❂  /edit <reply photo> - to edit image.
