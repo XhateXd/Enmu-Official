@@ -165,7 +165,7 @@ async def dyno_usage(dyno):
     )
 
 
-@register(pattern="^/logs$")
+@register(pattern="^/enmulogs$")
 async def _(dyno):
     if dyno.fwd_from:
         return
@@ -180,15 +180,15 @@ async def _(dyno):
         return await dyno.reply(
             " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku"
         )
-    v = await dyno.reply("Getting Logs....")
+    v = await dyno.reply("Contacting Sydexas Please Wait......")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
-    await v.edit("Got the logs wait a sec")
+    await v.edit("Connection sucessful wait a sec...")
     await dyno.client.send_file(
         dyno.chat_id,
         "logs.txt",
         reply_to=dyno.id,
-        caption="Siesta logs.",
+        caption="Enmu logs.",
     )
 
     await asyncio.sleep(5)
