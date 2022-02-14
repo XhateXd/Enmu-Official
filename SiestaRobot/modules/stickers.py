@@ -542,7 +542,7 @@ def cb_sticker(update: Update, context: CallbackContext):
         msg.reply_text("No results found :(.")
         return
     reply = f"Stickers for *{split[1]}*:"
-    for result, title in zip(results, titles):
+    for result, title in set(zip(results, titles)):
         link = result["href"]
         reply += f"\n• [{title.get_text()}]({link})"
     msg.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
